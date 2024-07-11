@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="">Book Worm</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="">Home Page</a>
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/allview/">All Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/bookadd/">Book Insert</a>
+              </li>    
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div align="center">
+        <img src="../assets/logomvc.png" height="300px">
+      </div>
+    <h1 style="text-align: center;">Book Insert</h1>
+    <div style="text-align: center;" >
+            <table align="center">
+                <tr>
+                    <td>
+                        <label>Book Name:</label>
+                    </td>
+                    <td><input type="text" [(ngModel)]="productdata.BookName" placeholder="Name" required #uname="ngModel"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> Book Summary:</label>
+                    </td>
+                    <td><textarea [(ngModel)]="productdata.BookSummary" placeholder="Summary" required></textarea></td>
+                </tr>
+            </table>
+    </div>
+    <div style="text-align: center;">
+        <button (click)="addproduct()">Save</button>
+    </div>
+</body>
+</html>
